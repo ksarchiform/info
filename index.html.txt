@@ -7,9 +7,9 @@
 </head>
 <body>
   <h1>Welcome to K & S Archiform</h1>
-  <p>Your architectural design and visualization partner.</p>
+  <p>This site is under construction. Please check back soon.</p>
 
-  <!-- Chatbase chatbot script -->
+  <!-- Chatbase chatbot (optional) -->
   <script>
   (function(){
     if(!window.chatbase || window.chatbase("getState") !== "initialized") {
@@ -27,7 +27,7 @@
     const onLoad = function() {
       const script = document.createElement("script");
       script.src = "https://www.chatbase.co/embed.min.js";
-      script.id = "l2zoGKj1szw138-fpDxhY"; // replace with your chatbot ID
+      script.id = "l2zoGKj1szw138-fpDxhY"; // Replace with your real ID
       script.domain = "www.chatbase.co";
       document.body.appendChild(script);
     };
