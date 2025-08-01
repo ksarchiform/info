@@ -4,94 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>K & S Archiform</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      border-bottom: 2px solid #007bff;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-    h1 {
-      color: #007bff;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #666;
-      border-top: 1px solid #ddd;
-      padding-top: 10px;
-    }
-  </style>
 </head>
 <body>
-
-<header>
   <h1>Welcome to K & S Archiform</h1>
-  <p>Your architectural design and visualization partner based in California.</p>
-</header>
+  <p>Your architectural design and visualization partner.</p>
 
-<main>
-  <h2>About Us</h2>
-  <p>K & S Archiform specializes in Revit modeling, 3D renderings, drafting, and permit-ready documentation.  
-  We collaborate locally and remotely with homeowners, developers, and licensed architects.</p>
-
-  <h2>Contact</h2>
-  <p>Phone: <strong>(Your Phone Number)</strong><br />
-     Email: <a href="mailto:info@ksarchiform.com">info@ksarchiform.com</a><br />
-     Website: <a href="https://www.ksarchiform.com" target="_blank">https://www.ksarchiform.com</a></p>
-
-  <h2>Follow Us</h2>
-  <p>
-    LinkedIn: <a href="https://www.linkedin.com/company/k-s-archiform/" target="_blank">K & S Archiform LinkedIn</a><br />
-    Instagram: <a href="https://www.instagram.com/ksarchiform/" target="_blank">K & S Archiform Instagram</a>
-  </p>
-</main>
-
-<footer>
-  <p>&copy; 2025 K & S Archiform. All rights reserved.</p>
-</footer>
-
-<!-- Chatbase chatbot script -->
-<script>
-(function(){
-  if(!window.chatbase || window.chatbase("getState") !== "initialized") {
-    window.chatbase = (...arguments) => {
-      if (!window.chatbase.q) { window.chatbase.q = [] }
-      window.chatbase.q.push(arguments)
+  <!-- Chatbase chatbot script -->
+  <script>
+  (function(){
+    if(!window.chatbase || window.chatbase("getState") !== "initialized") {
+      window.chatbase = (...arguments) => {
+        if (!window.chatbase.q) { window.chatbase.q = [] }
+        window.chatbase.q.push(arguments)
+      };
+      window.chatbase = new Proxy(window.chatbase, {
+        get(target, prop) {
+          if (prop === "q") { return target.q }
+          return (...args) => target(prop, ...args)
+        }
+      });
+    }
+    const onLoad = function() {
+      const script = document.createElement("script");
+      script.src = "https://www.chatbase.co/embed.min.js";
+      script.id = "l2zoGKj1szw138-fpDxhY"; // replace with your chatbot ID
+      script.domain = "www.chatbase.co";
+      document.body.appendChild(script);
     };
-    window.chatbase = new Proxy(window.chatbase, {
-      get(target, prop) {
-        if (prop === "q") { return target.q }
-        return (...args) => target(prop, ...args)
-      }
-    });
-  }
-  const onLoad = function() {
-    const script = document.createElement("script");
-    script.src = "https://www.chatbase.co/embed.min.js";
-    script.id = "l2zoGKj1szw138-fpDxhY"; // your Chatbase chatbot ID
-    script.domain = "www.chatbase.co";
-    document.body.appendChild(script);
-  };
-  if (document.readyState === "complete") {
-    onLoad();
-  } else {
-    window.addEventListener("load", onLoad);
-  }
-})();
-</script>
-
+    if (document.readyState === "complete") {
+      onLoad();
+    } else {
+      window.addEventListener("load", onLoad);
+    }
+  })();
+  </script>
 </body>
 </html>
